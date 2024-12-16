@@ -5,3 +5,4 @@ langgraph
 langchain-core
 google-generativeai
 langchain-google-genai
+pysqlite3-binary
