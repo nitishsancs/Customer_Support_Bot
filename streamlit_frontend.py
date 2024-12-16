@@ -1,12 +1,14 @@
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+
 import streamlit as st
 from vector_store import FlowerShopVectorStore
 from chatbot import app
 from langchain_core.messages import AIMessage, HumanMessage
 from tools import customers_database, data_protection_checks
 
-__import__('pysqlite3')
-import sys
-sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+
 
 st.set_page_config(layout='wide', page_title='Flower Shop Chatbot', page_icon='💐')
 
